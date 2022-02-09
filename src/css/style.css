@@ -1,0 +1,118 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    min-width: calc(100vw - 2px);
+    min-height: calc(100vh - 2px);
+    background-color: #e0e0e0;
+    padding: 1px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.canva {
+    width: 50%;
+    position: relative;
+}
+
+.canva #mapa {
+    width: 100%;
+}
+
+.alternativas {
+    width: 30%;
+    margin-right: 10%;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    text-align: center;
+    border-radius: 30px;
+    background: #e0e0e0;
+    box-shadow:  5px 5px 15px #c3c3c3,
+             -5px -5px 15px #fdfdfd;
+}
+
+.header {
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.alternativa {
+    width: 40%;
+    margin: 15px 0;
+    box-sizing: border-box;
+    padding: 10px 0;
+    border-radius: 30px;
+    cursor: pointer;
+    text-align: center;
+    background: #e0e0e0;
+    box-shadow:  5px 5px 15px #747474,
+                -5px -5px 15px #ffffff;
+    user-select: none;
+}
+
+.alternativa.active {
+    box-shadow:  inset 5px 5px 15px #747474,
+                inset -5px -5px 15px #ffffff;
+}
+
+.animal {
+    width: 8%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+#aranha {
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+}
+
+#mariposa {
+    top: 37%;
+    left: 50%;
+}
+
+#carrapato {
+    top: 43%;
+    left: 60%;
+}
+
+#mosca {
+    top: 54%;
+    left: 60%;
+}
+
+#borboleta {
+    top: 60%;
+    left: 50%;
+}
+
+#grilo {
+    top: 54%;
+    left: 40%
+}
+
+#libelula {
+    top: 43%;
+    left: 40%
+}
