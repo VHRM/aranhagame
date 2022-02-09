@@ -63,27 +63,27 @@
             requestAnimationFrame(() => {
                 document.getElementById(animalAlternativa[alternativa]).style.display = 'none';
             });
+            Swal.fire({
+                title: 'Respondida!',
+                text: `Você respondeu a pergunta ${fase + 1} com a opção ${alternativa.toUpperCase()}`,
+                confirmButtonText: 'Proxima pergunta',
+                allowOutsideClick: false,
+            }).then(() => {
+                isWaiting = false;
+                fase++;
+                if (fase < 3) {
+                    plotarMapa();
+                } else {
+                    Swal.fire({
+                        title: 'Parabens!',
+                        text: 'Você respondeu todas as perguntas',
+                        icon: 'success',
+                        showConfirmButton: false,
+                        allowOutsideClick: false,
+                    })
+                }
+            });
         }, 1000);
-        Swal.fire({
-            title: 'Respondida!',
-            text: `Você respondeu a pergunta ${fase + 1} com a opção ${alternativa.toUpperCase()}`,
-            confirmButtonText: 'Proxima pergunta',
-            allowOutsideClick: false,
-        }).then(() => {
-            isWaiting = false;
-            fase++;
-            if (fase < 3) {
-                plotarMapa();
-            } else {
-                Swal.fire({
-                    title: 'Parabens!',
-                    text: 'Você respondeu todas as perguntas',
-                    icon: 'sucess',
-                    showConfirmButton: false,
-                    allowOutsideClick: false,
-                })
-            }
-        });
     }
 
     function mover(animal, posicaoX, posicaoY) {
