@@ -1,2 +1,2 @@
-<php
-readfile(./index.html);
+<?php
+readfile("./index.html");
