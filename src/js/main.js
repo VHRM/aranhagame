@@ -59,7 +59,11 @@
 
     function moverAranha(alternativa) {
         mover(aranha, posicao['x'][alternativa][fase], posicao['y'][alternativa][fase]);
-        document.getElementById(animalAlternativa[alternativa]).style.display = 'none';
+        setTimeout(()=>{
+            requestAnimationFrame(() => {
+                document.getElementById(animalAlternativa[alternativa]).style.display = 'none';
+            });
+        }, 1000);
         Swal.fire({
             title: 'Respondida!',
             text: `Você respondeu a pergunta ${fase + 1} com a opção ${alternativa.toUpperCase()}`,
