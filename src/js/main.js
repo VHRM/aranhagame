@@ -92,6 +92,12 @@
     }
 
     function plotarMapa() {
+        borboleta.style.display = 'block';
+        carrapato.style.display = 'block';
+        grilo.style.display = 'block';
+        libelula.style.display = 'block';
+        mariposa.style.display = 'block';
+        mosca.style.display = 'block';
         mover(aranha, 50, 50);
         mover(mariposa, posicao['x']['a'][fase], posicao['y']['a'][fase]);
         mover(carrapato, posicao['x']['b'][fase], posicao['y']['b'][fase]);
@@ -99,12 +105,6 @@
         mover(borboleta, posicao['x']['d'][fase], posicao['y']['d'][fase]);
         mover(grilo, posicao['x']['e'][fase], posicao['y']['e'][fase]);
         mover(libelula, posicao['x']['f'][fase], posicao['y']['f'][fase]);
-        borboleta.style.display = 'block';
-        carrapato.style.display = 'block';
-        grilo.style.display = 'block';
-        libelula.style.display = 'block';
-        mariposa.style.display = 'block';
-        mosca.style.display = 'block';
         document.getElementById('mapa').src = `./src/img/${fase+1}.png`;
     }
 
