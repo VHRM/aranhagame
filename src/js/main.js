@@ -92,6 +92,7 @@
     }
 
     function plotarMapa() {
+        document.getElementById('mapa').src = `./src/img/${fase+1}.png`;
         borboleta.style.display = 'block';
         carrapato.style.display = 'block';
         grilo.style.display = 'block';
@@ -105,7 +106,6 @@
         mover(borboleta, posicao['x']['d'][fase], posicao['y']['d'][fase]);
         mover(grilo, posicao['x']['e'][fase], posicao['y']['e'][fase]);
         mover(libelula, posicao['x']['f'][fase], posicao['y']['f'][fase]);
-        document.getElementById('mapa').src = `./src/img/${fase+1}.png`;
     }
 
 })();
